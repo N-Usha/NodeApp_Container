@@ -36,7 +36,7 @@ jobs:
         azcliversion: latest
         inlineScript: |
           az account show
-          az storage -h
+          az webapp list
           az webapp create --resource-group ActionsDemo --plan ActionPlan --name AppWithContainer1  -i nginx
           
     - uses: azure/webapps-container-deploy@v1
